@@ -1,5 +1,5 @@
 {% set name = "pypcd4" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pypcd4-{{ version }}.tar.gz
-  sha256: a1a469b5e91b81225152b2d61133b406e56b8efcfeb76df8a7c600fac01de3bd
+  sha256: dae09e3ef475a8b30ef8888e9feaf82f479759c421cb56c6533a006981b48c27
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.21.0
-    - python-lzf >=0.2.4
+    - python-neo-lzf >=0.3.5
     - pydantic >=1.10.8,<3.0.0
 
 test:
